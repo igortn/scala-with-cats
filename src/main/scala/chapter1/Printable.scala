@@ -5,12 +5,16 @@ trait Printable[A] {
 }
 
 object PrintableInstances {
-  implicit val prStringInstance: Printable[String] = new Printable[String] {
+  implicit val printableStringInst: Printable[String] = new Printable[String] {
     def format(value: String): String = value
   }
 
-  implicit val prIntInstance: Printable[Int] = new Printable[Int] {
+  implicit val printableIntInst: Printable[Int] = new Printable[Int] {
     def format(value: Int): String = value.toString
+  }
+
+  implicit val printableCatInst: Printable[Cat] = new Printable[Cat] {
+    def format(value: Cat): String = s"${value.name} is a ${value.age} year-old ${value.color} cat."
   }
 }
 
