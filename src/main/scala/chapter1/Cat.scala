@@ -2,7 +2,7 @@ package chapter1
 
 final case class Cat(name: String, age: Int, color: String)
 
-object M {
+object Main {
   import PrintableInstances._
   import PrintableSyntax._
 
