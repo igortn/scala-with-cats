@@ -19,8 +19,11 @@ object Misc {
     * Apply a given function to an integer in a context.
     *
     * The caller has to provide the implicit either explicitly :),
-    * or by importing a proper cats instances.
+    * or by importing a proper cats instance.
     * Ex: import cats.instances.option._
+    *
+    * It is important to mention that cats functor syntax must
+    * be imported for this function to compile.
     */
   def f[T[_]](ctx: T[Int])(g: Int => Int)
              (implicit func: Functor[T]): T[Int] =
