@@ -2,14 +2,14 @@ name := "scala-with-cats"
 
 version := "0.1"
 
-scalaVersion := "2.12.4"
+scalaVersion := "2.12.6"
 
 scalacOptions := Seq(
   "-Ypartial-unification",
   "-language:higherKinds"
 )
 
-val catsVersion = "1.2.0"
+val catsVersion = "1.3.1"
 
 libraryDependencies ++= Seq(
   "org.typelevel" %% "cats-core",
