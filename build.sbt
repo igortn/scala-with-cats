@@ -9,11 +9,10 @@ scalacOptions := Seq(
   "-language:higherKinds"
 )
 
-val catsVersion = "1.4.0"
+val catsVersion = "1.5.0"
 
 libraryDependencies ++= Seq(
-  "org.typelevel" %% "cats-core",
-  "org.typelevel" %% "cats-free"
+  "org.typelevel" %% "cats-core"
 ).map(_ % catsVersion)
 
 libraryDependencies ++= Seq(
